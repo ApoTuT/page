@@ -36,6 +36,7 @@
             LRUPanel = new Panel();
             OPTPanel = new Panel();
             userSetting = new Label();
+            setting = new Button();
             SuspendLayout();
             // 
             // FIFOButton
@@ -78,30 +79,33 @@
             // 
             // FIFOPanel
             // 
+            FIFOPanel.AutoScroll = true;
             FIFOPanel.BackColor = SystemColors.ButtonShadow;
             FIFOPanel.BorderStyle = BorderStyle.Fixed3D;
             FIFOPanel.Location = new Point(319, 42);
             FIFOPanel.Name = "FIFOPanel";
-            FIFOPanel.Size = new Size(613, 70);
+            FIFOPanel.Size = new Size(613, 103);
             FIFOPanel.TabIndex = 4;
             // 
             // LRUPanel
             // 
+            LRUPanel.AutoScroll = true;
             LRUPanel.BackColor = SystemColors.ButtonShadow;
             LRUPanel.BorderStyle = BorderStyle.Fixed3D;
-            LRUPanel.Location = new Point(321, 136);
+            LRUPanel.Location = new Point(319, 310);
             LRUPanel.Name = "LRUPanel";
             LRUPanel.Size = new Size(611, 77);
             LRUPanel.TabIndex = 5;
             // 
             // OPTPanel
             // 
+            OPTPanel.AutoScroll = true;
             OPTPanel.BackColor = SystemColors.ButtonShadow;
             OPTPanel.BackgroundImageLayout = ImageLayout.None;
             OPTPanel.BorderStyle = BorderStyle.Fixed3D;
-            OPTPanel.Location = new Point(321, 234);
+            OPTPanel.Location = new Point(319, 186);
             OPTPanel.Name = "OPTPanel";
-            OPTPanel.Size = new Size(609, 89);
+            OPTPanel.Size = new Size(600, 96);
             OPTPanel.TabIndex = 6;
             OPTPanel.Paint += panel2_Paint;
             // 
@@ -114,11 +118,22 @@
             userSetting.TabIndex = 7;
             userSetting.Text = "用户已选择：";
             // 
+            // setting
+            // 
+            setting.Location = new Point(52, 399);
+            setting.Name = "setting";
+            setting.Size = new Size(94, 29);
+            setting.TabIndex = 8;
+            setting.Text = "设置";
+            setting.UseVisualStyleBackColor = true;
+            setting.Click += setting_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1032, 585);
+            Controls.Add(setting);
             Controls.Add(userSetting);
             Controls.Add(OPTPanel);
             Controls.Add(LRUPanel);
@@ -144,5 +159,6 @@
         private Panel LRUPanel;
         private Panel OPTPanel;
         private Label userSetting;
+        private Button setting;
     }
 }

@@ -40,6 +40,8 @@
             pageTimeIput = new TextBox();
             TLBTimeInput = new TextBox();
             adressInput = new TextBox();
+            submit = new Button();
+            whetherUseTLB = new CheckBox();
             SuspendLayout();
             // 
             // pageNumInput
@@ -139,11 +141,34 @@
             adressInput.Size = new Size(353, 27);
             adressInput.TabIndex = 11;
             // 
+            // submit
+            // 
+            submit.Location = new Point(576, 367);
+            submit.Name = "submit";
+            submit.Size = new Size(94, 29);
+            submit.TabIndex = 12;
+            submit.Text = "确定";
+            submit.UseVisualStyleBackColor = true;
+            submit.Click += submit_Click;
+            // 
+            // whetherUseTLB
+            // 
+            whetherUseTLB.AutoSize = true;
+            whetherUseTLB.Location = new Point(44, 335);
+            whetherUseTLB.Name = "whetherUseTLB";
+            whetherUseTLB.Size = new Size(121, 24);
+            whetherUseTLB.TabIndex = 13;
+            whetherUseTLB.Text = "是否使用快表";
+            whetherUseTLB.UseVisualStyleBackColor = true;
+            whetherUseTLB.CheckedChanged += whetherUseTLB_CheckedChanged;
+            // 
             // settings
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(whetherUseTLB);
+            Controls.Add(submit);
             Controls.Add(adressInput);
             Controls.Add(TLBTimeInput);
             Controls.Add(pageTimeIput);
@@ -177,5 +202,7 @@
         private TextBox pageTimeIput;
         private TextBox TLBTimeInput;
         private TextBox adressInput;
+        private Button submit;
+        private CheckBox whetherUseTLB;
     }
 }
